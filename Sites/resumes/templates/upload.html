@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <textarea name="job_description" placeholder="Введите описание вакансии"></textarea>
+        <input type="text" name="desired_positions" placeholder="Введите желаемые должности (через запятую)">
+        <input type="text" name="required_skills" placeholder="Введите требуемые навыки (через запятую)">
+        <button type="submit">Загрузить</button>
+    </form>
+</body>
+</html>
